@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+
+  :root {
+    --primary-color-blue: hsl(237, 18%, 59%);
+    --primary-color-red: hsl(345, 95%, 68%);
+    
+    --neutral-color-white:hsl(0, 0%, 100%);
+    --neutral-color-desaturated-blue:hsl(236, 21%, 26%);
+    --neutral-color-dark-blue:hsl(235, 16%, 14%);
+    --neutral-color-dark-black-blue: hsl(234, 17%, 12%);
+
+  }
+  
+  html {
+    font-family: "Red Hat Text", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  body {
+    font-size: 14px;
+    background-color: var(--neutral-color-dark-black-blue);
+    
+  }
+
+  .contactIcon:hover {
+    fill: var(--primary-color-red);
+    cursor: pointer;
+  
+  }
+
+}
