@@ -14,5 +14,15 @@
     --fcc-divider-height: 1px; /* height of divider */
     --fcc-separator-size: 6px; /* size of colon */
     --fcc-separator-color: none; /* color of colon */
-    font-weight: 700;
+    
+  } 
+
+  @media (width <= 450px) {
+    /* … */
+    .flip-clock {
+      scale: 0.82;
+    }
   }
+
+
+  
