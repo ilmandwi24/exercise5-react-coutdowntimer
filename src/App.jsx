@@ -14,7 +14,7 @@ function App() {
   const queryParameters = new URLSearchParams(window.location.search)
   const inputTanggal = queryParameters.get("tanggal");
   const inputJam = queryParameters.get("jam");
-  const [tanggal,setTanggal] = useState("2024-9-4");
+  const [tanggal,setTanggal] = useState("2024-9-3");
   const [jam,setJam] = useState("00");
   const [displayTanggal, setDisplayTanggal] = useState("")
   
