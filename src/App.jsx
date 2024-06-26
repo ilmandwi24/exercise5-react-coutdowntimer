@@ -20,6 +20,7 @@ function App() {
   
 
   useEffect(()=>{
+    setDisplayTanggal(moment(tanggal).format('dddd MMMM Do, YYYY HH:mm:ss'));
     if(typeof inputTanggal !== 'object')  {
       if(inputTanggal.length < 8 || inputTanggal.length > 8) return ;
 
@@ -31,6 +32,7 @@ function App() {
 
       console.log("tanggal default", new Date('2024-06-27').getTime(), "-");
       console.log("tanggal sementara", new Date(tanggalBaru).getTime(), "-", tanggalBaru);
+      
       // console.log(moment(tanggalBaru).format('YYYY-MM-DD'));
       if(typeof inputJam !== 'object') {
         if(inputJam > 24) {
@@ -50,10 +52,33 @@ function App() {
       setDisplayTanggal(moment(tanggal).format('dddd MMMM Do, YYYY HH:mm:ss'));
 
     }
+
+    if(typeof inputJam !== 'object') {
+      console.log(tanggal)
+      let dataJam =  new Date(tanggal).getTime();
+      // console.log(tanggalSementara)
+      if(inputJam > 24) {
+        setTanggal(dataJam)
+        setDisplayTanggal(moment(dataJam).format('dddd MMMM Do, YYYY HH:mm:ss'));
+
+          return 
+          
+      };
+
+      console.log(inputJam)
+      let dataJamBaru = dataJam  + inputJam *3600*1000
+      setTanggal(dataJamBaru)
+      // console.log("--",moment(tanggal))
+      // console.log("---",mo ment(tanggal).add(2,'hours'))
+      setDisplayTanggal(moment(dataJamBaru).format('dddd MMMM Do, YYYY HH:mm:ss'));
+      return; 
+
+      // return
+    }
     
 
     
-  })
+  },[]);
   
   return (
     <>
